@@ -30,7 +30,7 @@ public class App {
 
         //arbol(5);
         //divisiones(5000000);
-        //descompsicionNumero(5547);
+        descompsicionNumero(5547);
 
         
 
@@ -100,6 +100,7 @@ public class App {
         }
     }
     /**
+     * <b>WHILE</b>
      * Ejercicio con while que descompone un numero de varias cifras en digitos diferentes para luego sumar cada uno
      * @param i
      */
@@ -116,6 +117,7 @@ public class App {
     }
 
     /**
+     * <b>IF</b>
      * Metodo que genera 2 numeros y verifica si es mayor o no
      */
     public static void numAleatroios() {
@@ -132,6 +134,7 @@ public class App {
 
     }
     /**
+     * <b>FOR</b>
      * Este metodo realiza un triangulo con <b>*</b> con ciclos anidados de for
      * 
      * @param num Numero de * que se compone el triangulo
@@ -147,6 +150,7 @@ public class App {
     }
 
     /**
+     * <b>While</b>
      * Metodo con ciclo while que realiza divisiones de un numero de 10 en 10
      * @param num Numero que se va a dividir de 10 en 10
      */
@@ -157,6 +161,22 @@ public class App {
             cont ++;
             num = num / 10; // realiza las divisiones ( corregir con do while)
             System.out.println(cont + " >> "+ num);            
+        }
+    }
+
+    public static void cicloWhile(){
+        Scanner lectura = new Scanner(System.in);
+        boolean bandera = true;
+        int contador = 0;
+
+        do{
+            System.out.print("Ingrese un numero mayor a 15 >>")
+            int num = lectura.nextInt();
+            if(num < 15 ){
+                bandera = false;
+            }
+            contador += contador;
+
         }
     }
 
