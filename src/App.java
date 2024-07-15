@@ -8,17 +8,20 @@ import javax.swing.JOptionPane;
 public class App {
     public static void main(String[] args) throws Exception {
         System.out.println("\tHola mundo");
+
         
+        String nombre =  "Miguel";
+        System.out.println(nombre.substring(3, 4));
+
+
+        
+       // operacionesMatematicasCadena();
+
 
         //diagonalInversa();
-        
-
-
-        arraynombres();
-        
+        //arraynombres();        
         //usoArrayList();
-        //miArray();
-        
+        //miArray();       
         //recorridoInverso();
         //bordesMatriz();
         //cicloFor();
@@ -30,10 +33,59 @@ public class App {
 
         //arbol(5);
         //divisiones(5000000);
-        descompsicionNumero(5547);
+        //descompsicionNumero(5547);
 
         
 
+    }
+    private static void operacionesMatematicasCadena() {
+        Scanner scanner = new Scanner(System.in);
+        int posicionOperador = 0;
+        System.out.print("Ingrese la operacion que desea realizar: ");
+        String operacion = scanner.nextLine();
+
+        if (operacion.contains("+")) {
+            posicionOperador = operacion.indexOf("+");    
+        }else if (operacion.contains("-")) {
+            posicionOperador = operacion.indexOf("-");    
+        }else if (operacion.contains("*")) {
+            posicionOperador = operacion.indexOf("*");    
+        }else if (operacion.contains("/")) {
+            posicionOperador = operacion.indexOf("/");    
+        }
+        char operador = operacion.charAt(posicionOperador);
+
+
+
+        
+        int num1 = Integer.parseInt(operacion.substring(0, posicionOperador));
+        System.out.println("num1 "+num1);
+        int num2 = Integer.parseInt(operacion.substring(posicionOperador+1,operacion.length()));
+        System.out.println("num2 "+num2);
+
+
+        
+
+        switch (operador) {
+            case '+':
+                System.out.println("El valor de la suma es: "+ (num1+num2));        
+                break;
+            case '-':
+                System.out.println("El valor de la resta es: "+(num1-num2));
+                break;
+            case '*':
+                System.out.println("El valor de la multiplicacion es: "+ (num1*num2 ));
+                break;
+            case '/':
+                System.out.println("El valor de la division es: "+ (num1/num2));
+                break;
+            default:
+                System.out.println("Ingreso un operador incorrecto " );
+                break;
+        }
+
+
+        
     }
     private static void diagonalInversa() {
         Random random = new Random();
@@ -170,14 +222,14 @@ public class App {
         int contador = 0;
 
         do{
-            System.out.print("Ingrese un numero mayor a 15 >>")
+            System.out.print("Ingrese un numero mayor a 15 >>");
             int num = lectura.nextInt();
             if(num < 15 ){
                 bandera = false;
             }
             contador += contador;
 
-        }
+        }while(true);
     }
 
     public static void palabrasIguales(){
